@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 import setuptools
 
 setuptools.setup(
@@ -13,7 +14,19 @@ setuptools.setup(
 
     packages=setuptools.find_packages(),
 
-    install_requires=[],
+    install_requires=[
+        'junos-eznc',
+        'nagiosplugin',
+    ],
+    package_data={
+        'check_srx.tables': ['*.yml'],
+    },
+
+    entry_points={
+        'console_scripts': [
+            'check_srx = check_srx.main:main',
+        ],
+    },
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
