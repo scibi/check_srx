@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 """check-srx - Icinga/Nagios plugin for Juniper SRX firewalls"""
 
 __version__ = '0.1.0'

@@ -1,0 +1,20 @@
+---
+ChassisClusterStatus:
+  rpc: get-chassis-cluster-status
+  item: redundancy-group
+  key: redundancy-group-id
+  view: _ChassisClusterStatusView
+
+_ChassisClusterStatusView:
+  fields:
+    group_id: redundancy-group-id
+    device0_name: .//device-name[1]
+    device1_name: .//device-name[2]
+    device0_priority: .//device-priority[1]
+    device1_priority: .//device-priority[2]
+    device0_status: .//redundancy-group-status[1]
+    device1_status: .//redundancy-group-status[2]
+    device0_preempt: .//preempt[1]
+    device1_preempt: .//preempt[2]
+    device0_failover_mode: .//failover-mode[1]
+    device1_failover_mode: .//failover-mode[2]
